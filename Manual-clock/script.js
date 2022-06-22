@@ -24,9 +24,11 @@ const setSec = () => {
     secLine.style.webkitTransform = 'rotate(' + degree + 'deg)'
 }
 
-setInterval(
-    function () {
-        setHour();
-        setMin();
-        setSec();
-    }, 1000);
+const getTime = () => {
+    setHour();
+    setMin();
+    setSec();
+}
+
+setInterval(getTime(), 1000);
+getTime();
