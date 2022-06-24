@@ -3,11 +3,10 @@
     padding: 0;
     box-sizing: border-box;
 }
-.main{
-    position: absolute;
-    top: 5%;
-    left: 50%;
-    transform: translateX(-50%);
+main{
+    width: 60%;
+    margin: auto;
+    padding-top: 80px;
 }
 .container{
     display: flex;
@@ -52,4 +51,9 @@ a:hover{
     border-right: 2px solid #009879;
     background-color: #DDDDDD;
     font-weight: bold;
+}
+@media screen and (max-width: 972px) {
+    main{
+        width: 90%;
+    }
 }
