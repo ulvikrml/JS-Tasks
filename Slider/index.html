@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slider</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+</head>
+<body>
+    <div class="slider">
+        <div class="slide ">
+            <img src="img/1.jpg" alt="slide1">
+        </div>
+        <div class="slide deactive">
+            <img src="img/2.jpg" alt="slide2">
+        </div>
+        <div class="slide deactive">
+            <img src="img/3.jpg" alt="slide3">
+        </div>
+        <div class="slide deactive">
+            <img src="img/4.jpg" alt="slide4">
+        </div>
+
+        <a class="previous" onclick="nextSlide(-1)"><i class="fas fa-chevron-left"></i></a>
+        <a class="next" onclick="nextSlide(1)"><i class="fas fa-chevron-right"></i></a>
+
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+        </div>
+    </div>
+    
+    <script src="app.js"></script>
+</body>
+</html>
