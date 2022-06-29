@@ -14,3 +14,6 @@
 
 ### Tabs 🚀
 [Live Preview](https://grand-cannoli-b09806.netlify.app)
+
+### Slider 🚀
+[Live Preview](https://earnest-selkie-70df07.netlify.app)
