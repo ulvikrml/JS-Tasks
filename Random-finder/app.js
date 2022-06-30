@@ -1,11 +1,55 @@
-let check = document.querySelector('.check');
+let choseBtn = document.querySelector('.chose-btn');
+let choseSection = document.querySelector('.chose-sec');
+let fromNum, toNum;
+let random;
+let intervalText = document.querySelector('.between');
+let errorTxts = document.querySelectorAll('.error-txt')
+let errBig = document.querySelector('.err-big');
+let errPositive = document.querySelector('.err-positive');
+let errBlank = document.querySelector('.err-blank');
 function getRandomNum(min, max) {
     return Math.floor(Math.random() * ((max - min) + 1)) + min;
 }
-let random = getRandomNum(1, 20);
+choseBtn.addEventListener('click', (e) => {
+    let fromInput = document.querySelector('.fromInput');
+    let toInput = document.querySelector('.toInput');
+    let fromInputValue = fromInput.value;
+    let toInputValue = toInput.value;
+    e.preventDefault();
+    errorTxts.forEach(i=>i.classList.add('d-none'));
+    if (fromInputValue.length > 0 && toInputValue.length > 0) {
+        if(fromInputValue < 0 || toInputValue < 0){
+            errPositive.classList.remove('d-none');
+        }
+        else{
+            if(fromInputValue > toInputValue){
+            errBig.classList.remove('d-none');
+            }
+            else{
+                choseSection.classList.add('d-none');
+                fromNum = +fromInputValue;
+                toNum = +toInputValue;
+                random = getRandomNum(fromNum, toNum);
+                intervalText.textContent = `(Between ${fromNum} and ${toNum})`;
+                fromInput.value = '';
+                toInput.value = '';
+            }
+        }
+    }
+    else {
+        errBlank.classList.remove('d-none')
+    }
+})
+let setIntervalBtn = document.querySelector('.setInterval-btn');
+setIntervalBtn.addEventListener('click',()=>{
+    choseSection.classList.remove('d-none');
+
+})
+let check = document.querySelector('.check');
 console.log(random);
+
 let message = document.querySelector('.message');
-let input = document.querySelector('input');
+let guessInput = document.querySelector('.guess');
 let showNumber = document.querySelector('.number')
 let inc = 0;
 let score = document.querySelector('.score');
@@ -20,7 +64,7 @@ check.addEventListener('click', () => {
         if (topPoint != 1) {
             topPoint = topPoint - 1;
             score.innerHTML = topPoint;
-            let choosen = input.value;
+            let choosen = guessInput.value;
             if (random == choosen) {
                 topPoint++;
                 score.innerHTML = topPoint;
@@ -39,7 +83,7 @@ check.addEventListener('click', () => {
             else if (random < choosen) {
                 message.innerHTML = ((random - choosen) == 2) ? 'Close 📉' : ((random - choosen) == 1) ? 'Too close 📉' : 'Go down 📉 ';
             }
-            if (choosen == 0) {
+            if (choosen.length == 0) {
                 message.innerHTML = 'Write your guess!';
             }
         }
@@ -51,9 +95,9 @@ check.addEventListener('click', () => {
 })
 let again = document.querySelector('.again');
 again.addEventListener('click', () => {
-    random = getRandomNum(1, 20);
+    random = getRandomNum(fromNum, toNum);
     console.log(random);
-    input.value = '';
+    guessInput.value = '';
     body.style.backgroundColor = '#222'
     showNumber.innerHTML = '?';
     inc = 0;
@@ -62,7 +106,7 @@ again.addEventListener('click', () => {
     score.innerHTML = topPoint;
     isActive = true;
 })
-input.addEventListener("keyup", function (event) {
+guessInput.addEventListener("keyup", function (event) {
     if (event.key === 'Enter') {
         event.preventDefault();
         check.click();

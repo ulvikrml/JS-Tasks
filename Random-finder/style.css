@@ -46,7 +46,8 @@ main {
 }
 
 /* ELEMENTS STYLE */
-h1 {
+
+header h1 {
   font-size: 4rem;
   text-align: center;
   position: absolute;
@@ -74,6 +75,13 @@ h1 {
   position: absolute;
   top: 2rem;
   right: 2rem;
+}
+.setInterval-btn{
+  position: absolute;
+  top: 5rem;
+  right: 2rem;
+  font-size: 12px !important;
+  padding: 14px 12px !important;
 }
 
 .again {
@@ -116,4 +124,61 @@ h1 {
 
 .label-score {
   margin-bottom: 2rem;
+}
+
+
+
+
+.chose-sec{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  background: rgba(0,0,0,0.85);
+  z-index: 100;
+}
+.container{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 250px;
+  background: white;
+  padding: 25px 15px;
+}
+.chose-sec h1{
+  color: black;
+  text-align: center;
+  margin-bottom: 15px;
+}
+.chose-sec label{
+  color: black;
+  padding: 10px 0px 5px;
+}
+.chose-sec form{
+  display: flex;
+  flex-direction: column;
+}
+.chose-sec button{
+  outline: none;
+  margin-top: 7px;
+  width: 30%;
+  font-size: 10px;
+  padding: 3px;
+  background: rgba(0,0,0,0.75);
+  color: white;
+  border: none;
+  font-family: 'Press Start 2P', sans-serif;
+  cursor: pointer;
+}
+.chose-sec button:hover{
+  background: rgba(0,0,0,0.6);
+}
+.d-none{
+  display: none;
+}
+.error-txt{
+  color: red;
+  font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: 12px;
+  padding: 5px 0px 3px;
 }

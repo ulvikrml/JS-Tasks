@@ -1,32 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <header>
-        <h1>Guess My Number!</h1>
-        <p class="between">(Between 1 and 20)</p>
-        <button class="btn again">Again!</button>
-        <div class="number">?</div>
-      </header>
-      <main>
-        <section class="left">
-          <input type="number" class="guess" />
-          <button class="btn check">Check!</button>
-        </section>
-        <section class="right">
-          <p class="message">Start guessing...</p>
-          <p class="label-score">💯 Score: <span class="score">10</span></p>
-          <p class="label-highscore">
-            🥇 Highscore: <span class="highscore">0</span>
-          </p>
-        </section>
-      </main>
-    <script src="app.js"></script>
+  <div class="chose-sec">
+    <div class="container">
+      <h1>Set the interval</h1>
+      <form>
+        <label for="">From</label>
+        <input class='fromInput' name='from' type="number">
+        <label for="to">To</label>
+        <input  class='toInput' name='from' type="number">
+        <div class="error-txt err-big d-none">'To' should be bigger than 'From'</div>
+        <div class="error-txt err-positive d-none">Digits should be positive</div>
+        <div class="error-txt err-blank d-none">Enter both two numbers</div>
+        <button class="chose-btn">OK</button>
+      </form>
+    </div>
+  </div>
+  <header>
+    <h1>Guess My Number!</h1>
+    <p class="between">(Between x and y)</p>
+    <button class="btn setInterval-btn">Set Interval!</button>
+    <button class="btn again">Again!</button>
+    <div class="number">?</div>
+  </header>
+  <main>
+    <section class="left">
+      <input type="number" class="guess" />
+      <button class="btn check">Check!</button>
+    </section>
+    <section class="right">
+      <p class="message">Start guessing...</p>
+      <p class="label-score">💯 Score: <span class="score">10</span></p>
+      <p class="label-highscore">
+        🥇 Highscore: <span class="highscore">0</span>
+      </p>
+    </section>
+  </main>
+  <script src="app.js"></script>
 </body>
+
 </html>
