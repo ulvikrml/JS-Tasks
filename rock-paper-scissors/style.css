@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Anek+Latin:wght@200;400;500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #262A43;
+    font-family: 'Anek Latin', sans-serif;
+}
+header{
+    width: 60%;
+    margin: auto; 
+    color: white;    
+    padding-top: 50px;
+}
+.score-bar{
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+.score-bar h3{
+    font-size: 20px;    
+}
+.score-bar p{
+    font-size: 25px;    
+    margin-top: 10px;
+}
+main{
+    color: white;
+    width: 60%;
+    margin: auto; 
+    text-align: center;
+    padding-top: 30px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+}
+.container .player-chose{
+    transform: rotateY(180deg);
+}
+.choses-bar{
+    display: flex;
+    padding-left: 30px;
+}
+.choses-bar button{
+    background: #246558;
+    color: white;
+    border: none;
+    outline: none;
+    padding: 8px 18px;
+    font-size: 16px;
+    border-radius: 5px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+.choses-bar button:hover{
+    background: #2d8372;
+}
