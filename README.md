@@ -17,3 +17,9 @@
 
 ### Slider 🚀
 [Live Preview](https://earnest-selkie-70df07.netlify.app)
+
+### Random-finder 🚀
+[Live Preview](https://prismatic-malasada-72e87a.netlify.app/)
+
+### Rock-Paper-Scissors 🚀
+[Live Preview](https://cerulean-pithivier-896a3c.netlify.app/)
