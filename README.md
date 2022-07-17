@@ -23,3 +23,6 @@
 
 ### Rock-Paper-Scissors 🚀
 [Live Preview](https://cerulean-pithivier-896a3c.netlify.app/)
+
+### Quiz-app 🚀
+[Live Preview](https://fastidious-scone-e9c527.netlify.app/)
